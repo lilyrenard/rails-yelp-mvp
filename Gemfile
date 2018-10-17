@@ -66,3 +66,9 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 gem 'simple_form'
+
+
+gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 5.0.9'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'

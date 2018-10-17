@@ -1,0 +1,21 @@
+<div class="top-shelf top-shelf-grey center"><h1>Restaurants</h1></div>
+
+
+<div id="super-container" class="content-container">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <div class="main-attributes">
+          <h3><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h3>
+          <div class="category-list"><%= restaurant.category.capitalize%></div>
+        </div>
+        <div class="secondary-attributes">
+          <div class="font"><%= restaurant.phone_number%></div>
+          <div class="font"><%= restaurant.address%></div>
+        </div>
+      </li>
+    <%end%>
+  </ul>
+</div>
+
+

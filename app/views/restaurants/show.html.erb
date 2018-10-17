@@ -1,0 +1,27 @@
+<div class="top-shelf top-shelf-grey">
+  <div class="content-container">
+    <h1><%= @restaurant.name%></h1>
+    <h3><%= @restaurant.category.capitalize%></h3>
+    <div><%= @restaurant.address%></div>
+    <div><%= @restaurant.phone_number%></div>
+  </div>
+</div>
+
+<div id="super-container" class="content-container">
+  <ul>
+    <div><% @restaurant.reviews.each do |review|%>
+      <li>
+        <%= review.content%>
+        <div class="yellow-stars">
+          <% review.rating.to_i.times { %>
+            <i class="fa fa-star"></i>
+          <% } %>
+        </div>
+      </li>
+      <%end%>
+      <button type="button" class="btn btn-danger"> <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %></button>
+    </div>
+  </ul>
+</div>
+
+
